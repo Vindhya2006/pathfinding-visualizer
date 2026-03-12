@@ -4,7 +4,7 @@ An interactive web application to visualize popular pathfinding algorithms on a 
 Users can create walls, add weighted nodes, generate mazes, and watch algorithms find the shortest path step-by-step.
 
 🔗 **Live Demo:**
-pathfinding-visualizer-lime.vercel.app
+https://pathfinding-visualizer-lime.vercel.app
 
 ---
 

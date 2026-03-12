@@ -1,73 +1,111 @@
-# React + TypeScript + Vite
+# Pathfinding Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive web application to visualize popular pathfinding algorithms on a grid.
+Users can create walls, add weighted nodes, generate mazes, and watch algorithms find the shortest path step-by-step.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:**
+pathfinding-visualizer-lime.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Visualize **Breadth First Search (BFS)**
+* Visualize **Dijkstra's Algorithm**
+* Visualize **A* (A-Star) Algorithm**
+* Draw **walls** to block paths
+* Add **weighted nodes**
+* **Maze generator**
+* Adjustable **animation speed**
+* Interactive **start and end nodes**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Algorithms Implemented
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Breadth First Search (BFS)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Explores nodes level by level and guarantees the shortest path in an unweighted graph.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Dijkstra's Algorithm
+
+Finds the shortest path considering weights on nodes.
+
+### A* Search Algorithm
+
+Uses a heuristic (Manhattan distance) to efficiently find the shortest path toward the goal.
+
+---
+
+## Project Screenshots
+
+### BFS Visualization
+
+![BFS Demo](./demo1.png)
+
+### Maze Generation
+
+![Maze Demo](./demo2.png)
+
+### A* Shortest Path
+
+![A\* Demo](./demo3.png)
+
+---
+
+## Tech Stack
+
+* React
+* TypeScript
+* Vite
+* Bootstrap
+* Vercel (Deployment)
+
+---
+
+## Run Locally
+
+Clone the repository:
+
+```
+git clone https://github.com/Vindhya2006/pathfinding-visualizer.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Go into the project folder:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+cd pathfinding-visualizer
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+Run the development server:
+
+```
+npm run dev
+```
+
+---
+
+## Future Improvements
+
+* Add more algorithms (DFS, Greedy Best First Search)
+* Add diagonal movement
+* Improve maze generation algorithms
+* Add mobile responsiveness
+
+---
+
+## Author
+
+**Vindhya Choudhary**
+
+BTech Student | Aspiring Machine Learning Engineer
+
+GitHub:
+https://github.com/Vindhya2006
+

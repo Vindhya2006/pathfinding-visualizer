@@ -1,0 +1,127 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+.visited {
+  background: #4da6ff !important;
+}
+
+.path {
+  background: gold !important;
+}
+
+.wall {
+  background: black;
+}
+
+.weight {
+  background: purple;
+}
+
+.start {
+  background: #00c853;
+}
+
+.end {
+  background: #ff1744;
+}
+.cell {
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+}
+
+.visited {
+  background: #4da6ff !important;
+  animation: visit 0.3s ease;
+}
+
+.path {
+  background: gold !important;
+  animation: path 0.3s ease;
+}
+
+@keyframes visit {
+  0% { transform: scale(0.3); background: #b3e5fc; }
+  50% { transform: scale(1.2); background: #64b5f6; }
+  100% { transform: scale(1); background: #4da6ff; }
+}
+
+@keyframes path {
+  0% { transform: scale(0.5); background: #fff176; }
+  100% { transform: scale(1); background: gold; }
+}
+input[type="range"] {
+  width: 120px;
+  cursor: pointer;
+}
+.navbar button {
+  transition: transform 0.1s ease;
+}
+
+.navbar button:hover {
+  transform: scale(1.05);
+}
